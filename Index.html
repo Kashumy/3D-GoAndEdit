@@ -1,0 +1,182 @@
+<!DOCTYPE Html >
+<html>
+  <head  >
+  		<meta charset="UTF-8">
+  	<meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=0.5, user-scalable=0" />
+  	...
+  		<canvas onload="text2()"  ontouchmove="myFunction(event)" id="canvas "   class="a ssd canvas"  ></canvas>
+  		<canvas id="m"class="menu"></canvas>
+  		<title>3D block Krystiana obruć urządzenie</title>
+
+    <style>
+        canvas { width: 1324px; height: 512px; }
+        body{
+          
+        background : black ;
+        
+} 
+
+.ssd{
+  position :absolute ;
+  width: 1200px;
+  height: -512px;
+  
+}
+p{
+  position :absolute ;
+  color :#36FF2C;
+  font-size :20px;
+}
+.przycisk{
+  outline: none;
+  background :#A6A6A6A3;
+  width: 100px;
+  height:100px;
+  margin :10px;
+}
+.przycisk2 {
+  outline: none;
+  background: #565656C9;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  color:#CDCDCD;
+}
+.p{
+  position :absolute ;
+  top:220px;
+  left: 150px
+}
+.d{
+  position :absolute;
+  top:330px;
+  left: 150px
+}
+.C{
+  position :absolute;
+  top:330px;
+  left: 40px
+}
+.E{
+position :absolute;
+  top:330px;
+  left: 260px
+}
+.S {
+  position: absolute;
+  top: 330px;
+  left: 1460px
+}
+.F {
+  position: absolute;
+  top: 220px;
+  left: 1460px
+} 
+:root {
+  touch-action: pan-x pan-y;
+  height: 100%
+}
+body {
+  touch-action: manipulation;
+}
+.a {
+  
+  -webkit-filter: url(#a);
+  transition-duration: 4s ;
+  position :absolute ;
+  left:20px;
+} 
+.menu{
+  position :absolute ;
+  background-color :#444444C9;
+  width :1000px;
+  height :400px;
+  left :400px;
+  top:200px;
+}
+.b{
+  color :red;
+  font-size :20px;
+  
+  
+}
+.O{
+  position :absolute ;
+  left:1000px;
+}
+.optlight{
+  position :absolute ;
+  top:300px ;
+  width :400px;
+  left: 500px;
+}
+.kkryst {
+  position: absolute;
+  top: 350px;
+  left: 500px;
+}
+.day{
+  position :absolute ;
+  top: 400px;
+  left: 490px;
+}
+
+html, body {margin: 0; height: 100%; overflow:} 
+    </style>
+  </head>
+  <p id="console"  ></p>
+    <p id="console2" class="b" onload="ssd() " ></p>
+  <body scroll="no" style="overflow: hidden">
+  <body>
+    <button onload="text2"  class="przycisk p"  ontouchmove="go(event)"      onclick="go(event)"    >P</button>
+    
+    <button   class="przycisk d" ontouchmove="back(event)"      onclick="back(event)"  >D</button>
+    
+    
+        <button   class="przycisk C"    ontouchmove="right(event)"     >C</button>
+    
+        <button   class="przycisk E" ontouchmove="left(event)"    >E</button>
+    <button class="przycisk  S" ontouchmove="up(event)"  >Up</button>
+        <button class="przycisk  F" ontouchmove="down(event)"  >down</button>
+           <button class="przycisk  O" id="m2" onclick="menu()"  >Settings on </button>
+            <button class="przycisk O " id="m3"  onclick="menu2()"  >Settings off</button>
+
+<input type="range" id="m4" class="optlight" name="points" min="1" max="8">
+        
+<label for="color">color</label>
+<input type="color" value="#122118" id="color" class="kkryst" />
+        <button class="day przycisk2" id="daynight" onclick="night()" >Time</button>
+        
+        <svg width="0" height="0">
+  <filter id="a">
+    <feColorMatrix type="matrix" 
+      result="red_"             
+      values="4 0 0 0 0
+              0 0 0 0 0 
+              0 0 0 0 0 
+              0 0 0 1 0"/>
+    <feOffset in="red_" dx="2" dy="0" result="red"/>
+    <feColorMatrix type="matrix" 
+      in="SourceGraphic"             
+      result="blue_"             
+      values="0 0 0 0 0
+              0 4 0 0 0 
+              0 0 10 0 0 
+              0 0 0 1 0"/>
+    <feOffset in="blue_" dx="-3" dy="0" result="blue"/>    
+    <feBlend mode="screen" in="red" in2="blue"/>
+
+  </filter>
+</svg>
+
+
+
+    
+    
+    <div id="container"></div>
+<script type="text/javascript" src="cdn_modules/three.js@0.146.0/three.js"></script>
+<script src="/INDEX.JS"></script>
+<script src="/Index2.js"></script>
+<script src="/Full.js"></script>
+  </body>
+</html>
