@@ -232,7 +232,7 @@ onload = function gmtime() {
          document.getElementById('m').style.visibility ="visible ";
  }
 function night(){
-   bgcl = 'black' ;
+   bgcl = 'grey' ;
    li = 2;
 
   scene.background = new THREE.Color(lightintensity); 
